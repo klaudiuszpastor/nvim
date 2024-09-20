@@ -12,6 +12,11 @@ return {
         ensure_installed = {
           "lua_ls",
           "clangd",
+	    "mesonlsp",
+	    "cmake",
+	    "ltex",
+	    "marksman",
+	    "pyre",
         }
       })
   end
@@ -33,6 +38,21 @@ return {
         capabilities = capabilities,
       })
       lspconfig.clangd.setup({
+				capabilities = capabilities,
+			})
+	lspconfig.mesonlsp.setup({
+				capabilities = capabilities,
+			})
+	lspconfig.cmake.setup({
+				capabilities = capabilities,
+			})
+	lspconfig.ltex.setup({
+				capabilities = capabilities,
+			})
+	lspconfig.marksman.setup({
+				capabilities = capabilities,
+			})
+	lspconfig.pyre.setup({
 				capabilities = capabilities,
 			})
 
