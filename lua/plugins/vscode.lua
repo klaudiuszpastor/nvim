@@ -7,7 +7,7 @@ return {
             local c = require('vscode.colors').get_colors()
 
             require('vscode').setup({
-                transparent = true,  -- Włącz przezroczystość tła
+--                transparent = true,  -- Włącz przezroczystość tła
                 italic_comments = true,  -- Włącz kursywę dla komentarzy
                 underline_links = true,  -- Podkreślaj linki
                 disable_nvimtree_bg = true,  -- Wyłącz kolor tła dla nvim-tree
