@@ -15,5 +15,6 @@ vim.opt.hlsearch = false
 vim.opt.autoindent = true
 
 vim.opt.guifont = "JetBrainsMono Nerd Font"
+vim.cmd("colorscheme vim")
 
 
