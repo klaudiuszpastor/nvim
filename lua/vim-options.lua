@@ -13,8 +13,14 @@ vim.opt.scrolloff = 10
 vim.opt.termguicolors = true
 vim.opt.hlsearch = false
 vim.opt.autoindent = true
-
+vim.opt.clipboard = "unnamedplus"
 vim.opt.guifont = "JetBrainsMono Nerd Font"
 vim.cmd("colorscheme vim")
+
+-- In visual mode, copy selection to system clipboard
+vim.api.nvim_set_keymap('v', '<leader>y', '"+y', { noremap = true, silent = true })
+
+-- In normal mode, copy the current line to system clipboard
+vim.api.nvim_set_keymap('n', '<leader>y', '"+yy', { noremap = true, silent = true })
 
 
