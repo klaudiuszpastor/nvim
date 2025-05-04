@@ -5,8 +5,9 @@ return {
 	config = function()
 		require("lualine").setup({
 			options = {
-				theme = 'vscode' 
---				theme = 'gruvbox_dark'
+				--theme = 'vscode' 
+				--theme = 'gruvbox_dark'
+				theme = "auto"
 			}
 		})
 		-- require("transparent").clear_prefix("lualine")
