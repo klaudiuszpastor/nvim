@@ -3,15 +3,38 @@ return {
 
 	config = function()
 		require("barbar").setup({
-			auto_hide = 1
+			animation = false,
+			auto_hide = false,
+			clickable = true,
+			tabpages = true,
+			maximum_padding = 1,
+			minimum_padding = 1,
+
+			icons = {
+				-- turn off the index number
+				buffer_index = false,
+
+				-- disable filetype icons
+				filetype = {
+					enabled = false,
+				},
+
+				-- disable modified indicator
+				modified = {
+					enabled = false,
+				},
+
+				-- disable the close button
+				button = false,
+			},
 		})
 		vim.keymap.set("n", "<tab>", ":BufferNext<CR>")
 		vim.keymap.set("n", "<S-tab>", ":BufferPrevious<CR>")
 		vim.keymap.set("n", "<leader>x", ":BufferClose<CR>")
 
 		-- Zakładki
-		vim.api.nvim_set_hl(0, "BufferCurrent",        { fg = "#ffffff", bg = "none", bold = true })
-		vim.api.nvim_set_hl(0, "BufferCurrentMod",     { fg = "#ffff5f", bg = "none", bold = true })
+		vim.api.nvim_set_hl(0, "BufferCurrent",        { fg = "#ffffff", bg = "none"})
+		vim.api.nvim_set_hl(0, "BufferCurrentMod",     { fg = "#ffff5f", bg = "none"})
 
 		-- Nieaktywne zakładki
 		vim.api.nvim_set_hl(0, "BufferInactive",       { fg = "#aaaaaa", bg = "#1c1c1c" })
