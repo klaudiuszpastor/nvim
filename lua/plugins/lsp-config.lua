@@ -43,9 +43,9 @@ return {
       })
 
       -- Perl LSP (PLS)
-      lspconfig.perlpls.setup({
-        capabilities = capabilities,
-      })
+      -- lspconfig.perlpls.setup({
+      -- capabilities = capabilities,
+      -- })
 
       -- common keymaps
       vim.keymap.set("n", "K",           vim.lsp.buf.hover,        {})
