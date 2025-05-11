@@ -46,7 +46,7 @@ return {
         },
         lualine_x = {},
         lualine_y = {'tabs'},
-        lualine_z = {'searchcount','location'}
+        lualine_z = {'selectioncount','searchcount','location'}
       },
       inactive_sections = {
         lualine_a = {},

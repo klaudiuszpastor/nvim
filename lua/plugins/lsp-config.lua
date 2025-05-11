@@ -14,7 +14,7 @@ return {
           "clangd",
           "mesonlsp",
           "cmake",
-          "ltex",
+--          "ltex",
           "marksman",
           "pyre",
           "bashls",    -- Bash Language Server (lspconfig name) :contentReference[oaicite:0]{index=0}

@@ -26,6 +26,8 @@ return {
 
     -- Uniform white background and black text for all barbar components
     local style = { fg = "#FFFFFF", bg = "#000000" }
+		local buffer_style = { fg = "#000000", bg = "#FFFFFF" }
+
     -- Current buffer
     vim.api.nvim_set_hl(0, "BufferCurrent",      style)
     vim.api.nvim_set_hl(0, "BufferCurrentMod",   style)
@@ -39,8 +41,10 @@ return {
     vim.api.nvim_set_hl(0, "BufferInactiveMod",   style)
     vim.api.nvim_set_hl(0, "BufferInactiveIndex", style)
     -- Separators between buffers
-    vim.api.nvim_set_hl(0, "BufferSeparator",    style)
-   
+    vim.api.nvim_set_hl(0, "BufferCurrentSign",    buffer_style)
+		vim.api.nvim_set_hl(0, "BufferInactiveSign",    style)
+		vim.api.nvim_set_hl(0, "BufferVisibleSign",    style)
+
 		-- require("transparent").clear_prefix("barbar")
 	end,
 }
