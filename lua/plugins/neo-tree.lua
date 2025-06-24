@@ -53,7 +53,7 @@ return {
     vim.keymap.set("n", "<C-n>",       ":Neotree filesystem reveal right<CR>", {})
     vim.keymap.set("n", "<leader>bf",  ":Neotree buffers reveal float<CR>",  {})
 
-    require("transparent").clear_prefix("Neotree")
+    --require("transparent").clear_prefix("Neotree")
   end,
 }
 

@@ -13,11 +13,12 @@ return {
           "lua_ls",
           "clangd",
           "mesonlsp",
-          "cmake",
+--          "cmake",
 --          "ltex",
           "marksman",
-          "pyre",
-          "bashls",    -- Bash Language Server (lspconfig name) :contentReference[oaicite:0]{index=0}
+--          "pyre",
+--          "bashls",    -- Bash Language Server (lspconfig name) :contentReference[oaicite:0]{index=0}
+--					"perlpls",
         }
       })
     end
@@ -32,20 +33,20 @@ return {
       lspconfig.lua_ls.setup({ settings = { Lua = { diagnostics = { globals = { "vim" } } } }, capabilities = capabilities })
       lspconfig.clangd.setup({                  capabilities = capabilities })
       lspconfig.mesonlsp.setup({                capabilities = capabilities })
-      lspconfig.cmake.setup({                   capabilities = capabilities })
-      lspconfig.ltex.setup({                    capabilities = capabilities })
+--      lspconfig.cmake.setup({                   capabilities = capabilities })
+--      lspconfig.ltex.setup({                    capabilities = capabilities })
       lspconfig.marksman.setup({                capabilities = capabilities })
-      lspconfig.pyre.setup({                    capabilities = capabilities })
+ --     lspconfig.pyre.setup({                    capabilities = capabilities })
 
       -- Bash LSP
-      lspconfig.bashls.setup({
-        capabilities = capabilities,
-      })
+--      lspconfig.bashls.setup({
+--        capabilities = capabilities,
+--      })
 
       -- Perl LSP (PLS)
-      -- lspconfig.perlpls.setup({
-      -- capabilities = capabilities,
-      -- })
+ --     lspconfig.perlpls.setup({
+ --     	capabilities = capabilities,
+ --     })
 
       -- common keymaps
       vim.keymap.set("n", "K",           vim.lsp.buf.hover,        {})

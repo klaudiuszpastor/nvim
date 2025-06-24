@@ -6,12 +6,13 @@ vim.opt.wrap = false
 vim.opt.expandtab = false
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
-vim.opt.cursorline = false
+vim.opt.cursorline = true
 vim.opt.ignorecase = true
 vim.opt.splitbelow = true
 vim.opt.scrolloff = 10
 vim.opt.termguicolors = true
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
+vim.opt.incsearch = true
 vim.opt.autoindent = true
 
 -- Clipboard settings
@@ -45,7 +46,7 @@ vim.api.nvim_create_autocmd({ "VimEnter", "ColorScheme" }, {
 vim.cmd("colorscheme vim")
 vim.o.background = "dark"
 vim.cmd("syntax on")
-vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })  -- black bg 
+vim.api.nvim_set_hl(0, "Normal", { bg = "#2e2e2e" })  -- bg 
 
 -- Pmenu colorscheme
 vim.api.nvim_set_hl(0, "Pmenu",      { bg = "#2e2e2e", fg = "#c0c0c0" })

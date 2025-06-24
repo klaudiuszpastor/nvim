@@ -4,8 +4,20 @@ return {
 	config = function()
 		local alpha = require("alpha")
 		local dashboard = require("alpha.themes.dashboard")
-
---		dashboard.section.header.val = {
+  dashboard.section.header.val = {
+    [[      /\     /\]],
+    [[     {  `---'  }]],
+    [[     {  O   O  }]],
+    [[     ~~>  V  <~~]],
+    [[      \  \|/  /]],
+    [[       `-----'____]],
+    [[      /     \    \_]],
+    [[     {       }\  )_\_   _]],
+    [[     |  \_/  |/ /  \_\_/ )]],
+    [[      \__/  /(_/     \__/]],
+    [[        (__)       ]],
+  }
+		--		dashboard.section.header.val = {
 --			"                                                     ",
 --			"  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
 --			"  ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ",
