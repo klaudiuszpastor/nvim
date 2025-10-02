@@ -26,10 +26,12 @@ return {
 
     -- Uniform white background and black text for all barbar components
     local style = { fg = "#FFFFFF", bg = "#000000" }
+    local style_bold = { fg = "#FFFFFF", bg = "#000000", bold = true }
+
 		local buffer_style = { fg = "#000000", bg = "#FFFFFF" }
 
     -- Current buffer
-    vim.api.nvim_set_hl(0, "BufferCurrent",      style)
+    vim.api.nvim_set_hl(0, "BufferCurrent",      style_bold)
     vim.api.nvim_set_hl(0, "BufferCurrentMod",   style)
     vim.api.nvim_set_hl(0, "BufferCurrentIndex", style)
     -- Visible buffers (not current)

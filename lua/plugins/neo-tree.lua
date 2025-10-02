@@ -3,24 +3,42 @@ return {
   branch = "v3.x",
   dependencies = {
     "nvim-lua/plenary.nvim",
-    "nvim-tree/nvim-web-devicons",  -- you can leave this (or remove it) — icons are blanked out below
+    "nvim-tree/nvim-web-devicons",
     "MunifTanjim/nui.nvim",
   },
   config = function()
     require("neo-tree").setup({
-      default_component_configs = {
-        icon = {
-          folder_closed = "",  -- no folder-closed icon
-          folder_open   = "",  -- no folder-open icon
-          folder_empty  = "",  -- no folder-empty icon
-          default       = "",  -- no file icon
+      filesystem = {
+        follow_current_file = true,   -- automatically set the root to the current file
+        use_libuv_file_watcher = true,
+        collapse_dirs = true,         -- folder becomes the root of the view
+        filtered_items = {
+          hide_dotfiles = false,
+          hide_gitignored = false,
+        },
+        window = {
+          width = 40,
+          mappings = {
+            ["<CR>"] = "open",        -- Enter = open folder / file
+            ["l"] = "open",           -- vim-style l = open
+            ["<BS>"] = "navigate_up", -- Backspace = go back to parent folder
+            ["h"] = "close_node",     -- vim-style h = close folder
+          },
         },
       },
-      -- override the renderers to simply omit the icon component entirely
+
+      default_component_configs = {
+        icon = {
+          folder_closed = "",
+          folder_open   = "",
+          folder_empty  = "",
+          default       = "",
+        },
+      },
+
       renderers = {
         directory = {
           { "indent" },
-          -- { "icon" },    
           { "current_filter" },
           {
             "container",
@@ -34,7 +52,6 @@ return {
         },
         file = {
           { "indent" },
-          -- { "icon" },    
           {
             "container",
             content = {
@@ -50,10 +67,11 @@ return {
       },
     })
 
+    -- Global keymaps for opening Neo-tree
     vim.keymap.set("n", "<C-n>",       ":Neotree filesystem reveal right<CR>", {})
     vim.keymap.set("n", "<leader>bf",  ":Neotree buffers reveal float<CR>",  {})
 
-    --require("transparent").clear_prefix("Neotree")
+    -- If you use a transparent theme
+    -- require("transparent").clear_prefix("Neotree")
   end,
 }
-
