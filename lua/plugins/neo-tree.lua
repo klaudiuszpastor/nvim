@@ -9,7 +9,7 @@ return {
   config = function()
     require("neo-tree").setup({
       filesystem = {
-        follow_current_file = true,   -- automatically set the root to the current file
+        -- follow_current_file = true,   -- automatically set the root to the current file
         use_libuv_file_watcher = true,
         collapse_dirs = true,         -- folder becomes the root of the view
         filtered_items = {
