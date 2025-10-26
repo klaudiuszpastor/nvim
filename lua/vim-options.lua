@@ -40,7 +40,9 @@ vim.cmd("syntax on")
 -- vim.api.nvim_set_hl(0, "ColorColumn", { ctermbg = 234 })
 vim.opt.colorcolumn = "85"
 vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#3a3a3a", bold = true })
-vim.api.nvim_set_hl(0, "Normal", { bg = "#2e2e2e", bold = true })  -- bg 
+vim.api.nvim_set_hl(0, "Normal", { bg = "#000000", bold = true })   -- bg
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "#2e2e2e", bold = true })  -- bg 
+--vim.api.nvim_set_hl(0, "Normal", { bg = "#333333", bold = true })  -- bg 
 
 -- Pmenu colors
 

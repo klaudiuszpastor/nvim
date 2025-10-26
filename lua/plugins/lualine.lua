@@ -7,15 +7,16 @@ return {
         icons_enabled        = false,
         component_separators = { left = '', right = '' },
         section_separators   = { left = '', right = '' },
-        theme = {
-          -- black text on white background
-          normal   = { a = { fg = '#000000', bg = '#FFFFFF' }, b = { fg = '#000000', bg = '#FFFFFF' }, c = { fg = '#000000', bg = '#FFFFFF' } },
-          insert   = { a = { fg = '#000000', bg = '#FFFFFF' }, b = { fg = '#000000', bg = '#FFFFFF' }, c = { fg = '#000000', bg = '#FFFFFF' } },
-          visual   = { a = { fg = '#000000', bg = '#FFFFFF' }, b = { fg = '#000000', bg = '#FFFFFF' }, c = { fg = '#000000', bg = '#FFFFFF' } },
-          replace  = { a = { fg = '#000000', bg = '#FFFFFF' }, b = { fg = '#000000', bg = '#FFFFFF' }, c = { fg = '#000000', bg = '#FFFFFF' } },
-          command  = { a = { fg = '#000000', bg = '#FFFFFF' }, b = { fg = '#000000', bg = '#FFFFFF' }, c = { fg = '#000000', bg = '#FFFFFF' } },
-          inactive = { a = { fg = '#000000', bg = '#FFFFFF' }, b = { fg = '#000000', bg = '#FFFFFF' }, c = { fg = '#000000', bg = '#FFFFFF' } },
-        },
+        --theme = {
+        --  -- black text on white background
+        --  normal   = { a = { fg = '#000000', bg = '#FFFFFF' }, b = { fg = '#000000', bg = '#FFFFFF' }, c = { fg = '#000000', bg = '#FFFFFF' } },
+        --  insert   = { a = { fg = '#000000', bg = '#FFFFFF' }, b = { fg = '#000000', bg = '#FFFFFF' }, c = { fg = '#000000', bg = '#FFFFFF' } },
+        --  visual   = { a = { fg = '#000000', bg = '#FFFFFF' }, b = { fg = '#000000', bg = '#FFFFFF' }, c = { fg = '#000000', bg = '#FFFFFF' } },
+        --  replace  = { a = { fg = '#000000', bg = '#FFFFFF' }, b = { fg = '#000000', bg = '#FFFFFF' }, c = { fg = '#000000', bg = '#FFFFFF' } },
+        --  command  = { a = { fg = '#000000', bg = '#FFFFFF' }, b = { fg = '#000000', bg = '#FFFFFF' }, c = { fg = '#000000', bg = '#FFFFFF' } },
+        --  inactive = { a = { fg = '#000000', bg = '#FFFFFF' }, b = { fg = '#000000', bg = '#FFFFFF' }, c = { fg = '#000000', bg = '#FFFFFF' } },
+        --},
+        theme = 'gruvbox_dark',
         disabled_filetypes = {},
       },
       sections = {
