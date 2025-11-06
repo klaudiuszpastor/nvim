@@ -29,6 +29,10 @@ vim.opt.listchars = "lead:.,eol:€"
 vim.api.nvim_set_keymap('v', '<leader>y', '"+y', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>y', '"+yy', { noremap = true, silent = true })
 
+-- Tab buffor in normal mode
+vim.api.nvim_set_keymap('n', '<Tab>', ':bnext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<S-Tab>', ':bprevious<CR>', { noremap = true, silent = true })
+
 -- Copilot settings
 vim.g.copilot_enabled = false
 
