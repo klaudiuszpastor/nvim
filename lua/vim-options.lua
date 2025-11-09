@@ -54,8 +54,10 @@ vim.api.nvim_set_hl(0, "Pmenu", { bg = "#2e2e2e", fg = "#c0c0c0" })
 vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#5f87ff", fg = "#ffffff" })
 vim.api.nvim_set_hl(0, "PmenuSbar", { bg = "#1f1f1f" })
 vim.api.nvim_set_hl(0, "PmenuThumb", { bg = "#3f3f3f" })
+
 -- Font configuration
-vim.opt.guifont = "JetBrainsMono Nerd Font"
+-- vim.opt.guifont = "JetBrainsMono Nerd Font"
+vim.opt.guifont = "IBM Plex Mono"
 
 -- Create autocmd groups for better organization
 vim.api.nvim_create_augroup("Highlighting", { clear = true })
